@@ -1,0 +1,10 @@
+I2C Bus Hang Detection and Automatic Recovery Controller
+Preliminary post-route STA — global-route parasitic estimates, no extracted SPEF
+Clock period: 10 ns; clock uncertainty: 0.2 ns
+
+Corner     Worst max slack (ns)   Worst min slack (ns)  
+TT         7.23                   0.35                  
+SS         1.24                   0.76                  
+FF         7.82                   0.14                  
+
+Note: Values are from the current STA script output. Verify full path coverage and constraint checks before claiming timing signoff.

@@ -1,0 +1,152 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+CORNER: SS — GLOBAL-ROUTE PARASITIC ESTIMATES; NO SPEF
+===== CHECK_SETUP =====
+Startpoint: rst_n (input port clocked by core_clk)
+Endpoint: state[0]$_DFF_PN1_ (recovery check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (propagated)
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ rst_n (in)
+   1.68    2.68 ^ input3/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+   1.24    3.92 ^ place11/X (sky130_fd_sc_hd__buf_4)
+   0.00    3.93 ^ state[0]$_DFF_PN1_/SET_B (sky130_fd_sc_hd__dfstp_2)
+           3.93   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock source latency
+   0.00   10.00 ^ clk (in)
+   0.30   10.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.52   10.83 ^ clkbuf_1_1__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00   10.83 ^ state[0]$_DFF_PN1_/CLK (sky130_fd_sc_hd__dfstp_2)
+  -0.20   10.63   clock uncertainty
+   0.00   10.63   clock reconvergence pessimism
+   0.19   10.81   library recovery time
+          10.81   data required time
+---------------------------------------------------------
+          10.81   data required time
+          -3.93   data arrival time
+---------------------------------------------------------
+           6.88   slack (MET)
+
+
+Startpoint: state[0]$_DFF_PN1_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: half_count[0]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.30    0.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.52    0.83 ^ clkbuf_1_1__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00    0.83 ^ state[0]$_DFF_PN1_/CLK (sky130_fd_sc_hd__dfstp_2)
+   2.87    3.70 ^ state[0]$_DFF_PN1_/Q (sky130_fd_sc_hd__dfstp_2)
+   0.26    3.95 v _133_/Y (sky130_fd_sc_hd__inv_1)
+   1.93    5.89 ^ _137_/Y (sky130_fd_sc_hd__o32ai_2)
+   1.44    7.33 ^ _142_/X (sky130_fd_sc_hd__and2_4)
+   1.33    8.66 v _147_/X (sky130_fd_sc_hd__mux2_4)
+   0.00    8.66 v half_count[0]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+           8.66   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock source latency
+   0.00   10.00 ^ clk (in)
+   0.30   10.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.53   10.83 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00   10.83 ^ half_count[0]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.20   10.63   clock uncertainty
+   0.00   10.63   clock reconvergence pessimism
+  -0.74    9.90   library setup time
+           9.90   data required time
+---------------------------------------------------------
+           9.90   data required time
+          -8.66   data arrival time
+---------------------------------------------------------
+           1.24   slack (MET)
+
+
+===== CHECK_SETUP =====
+Startpoint: rst_n (input port clocked by core_clk)
+Endpoint: fault$_DFFE_PN0P_ (removal check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (propagated)
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ rst_n (in)
+   1.68    2.68 ^ input3/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+   1.24    3.92 ^ place11/X (sky130_fd_sc_hd__buf_4)
+   0.00    3.93 ^ fault$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+           3.93   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.30    0.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.53    0.83 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00    0.83 ^ fault$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.20    1.03   clock uncertainty
+   0.00    1.03   clock reconvergence pessimism
+   2.13    3.17   library removal time
+           3.17   data required time
+---------------------------------------------------------
+           3.17   data required time
+          -3.93   data arrival time
+---------------------------------------------------------
+           0.76   slack (MET)
+
+
+Startpoint: fault$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: fault$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.30    0.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.53    0.83 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00    0.83 ^ fault$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   1.41    2.24 ^ fault$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.50    2.74 ^ _226_/X (sky130_fd_sc_hd__a22o_1)
+   0.00    2.74 ^ fault$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+           2.74   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock source latency
+   0.00    0.00 ^ clk (in)
+   0.30    0.30 ^ clkbuf_0_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.53    0.83 ^ clkbuf_1_0__f_clk/X (sky130_fd_sc_hd__clkbuf_8)
+   0.00    0.83 ^ fault$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.20    1.03   clock uncertainty
+   0.00    1.03   clock reconvergence pessimism
+  -0.06    0.97   library hold time
+           0.97   data required time
+---------------------------------------------------------
+           0.97   data required time
+          -2.74   data arrival time
+---------------------------------------------------------
+           1.76   slack (MET)
+
+
+worst slack max 1.24
+worst slack min 0.76

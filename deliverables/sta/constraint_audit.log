@@ -1,0 +1,54 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+===== UNCONSTRAINED ENDPOINT CHECK =====
+===== UNCLOCKED SEQUENTIAL ELEMENT CHECK =====
+===== UNCONSTRAINED MAX-DELAY PATHS =====
+Startpoint                           Endpoint                               Slack
+--------------------------------------------------------------------------------
+rst_n (input)                        scl_release$_DFFE_PN1P_/SET_B (sky130_fd_sc_hd__dfstp_2)    8.43
+rst_n (input)                        state[0]$_DFF_PN1_/SET_B (sky130_fd_sc_hd__dfstp_2)    8.43
+rst_n (input)                        half_count[0]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        half_count[1]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        half_count[2]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        scl_phase$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        timeout_count[6]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        state[4]$_DFF_PN0_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        state[2]$_DFF_PN0_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+rst_n (input)                        busy$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    8.48
+sda_in (input)                       half_count[0]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.30
+sda_in (input)                       timeout_count[5]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.37
+sda_in (input)                       timeout_count[4]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.43
+sda_in (input)                       timeout_count[3]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.43
+sda_in (input)                       timeout_count[0]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.44
+sda_in (input)                       half_count[1]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.44
+sda_in (input)                       pulse_count[3]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.45
+sda_in (input)                       timeout_count[2]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.46
+sda_in (input)                       pulse_count[2]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.49
+sda_in (input)                       scl_phase$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    7.49
+
+===== UNCONSTRAINED MIN-DELAY PATHS =====
+Startpoint                           Endpoint                               Slack
+--------------------------------------------------------------------------------
+rst_n (input)                        timeout_count[3]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        timeout_count[4]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        timeout_count[1]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        timeout_count[0]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        timeout_count[2]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        recovery_done$_DFF_PN0_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        state[1]$_DFF_PN0_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        fault$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        state[3]$_DFF_PN0_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+rst_n (input)                        pulse_count[1]$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)    0.89
+fault$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) fault$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.31
+scl_release$_DFFE_PN1P_/Q (sky130_fd_sc_hd__dfstp_2) scl_release$_DFFE_PN1P_/D (sky130_fd_sc_hd__dfstp_2)    0.33
+state[1]$_DFF_PN0_/Q (sky130_fd_sc_hd__dfstp_2) state[0]$_DFF_PN1_/D (sky130_fd_sc_hd__dfstp_2)    0.34
+state[1]$_DFF_PN0_/Q (sky130_fd_sc_hd__dfrtp_1) state[1]$_DFF_PN0_/D (sky130_fd_sc_hd__dfrtp_1)    0.35
+timeout_count[0]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) timeout_count[0]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.35
+half_count[1]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) half_count[1]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.36
+pulse_count[2]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) pulse_count[2]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.36
+timeout_count[1]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) timeout_count[1]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.37
+pulse_count[1]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) pulse_count[1]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.37
+busy$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1) busy$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)    0.38
+

@@ -1,0 +1,15 @@
+I2C Recovery Controller — Preliminary Extracted-Parasitic STA
+Clock period: 10 ns
+Clock uncertainty: 0.2 ns
+Parasitics: Experimental Sky130HD test extraction rules; TT SPEF reused at all timing libraries.
+Results are preliminary and are NOT corner-specific signoff.
+
+Corner   Setup Slack (ns)   Hold Slack (ns)
+TT       +7.30              +0.31
+SS       +1.52              +0.72
+FF       +7.86              +0.11
+
+All six reported slack values are positive.
+Smallest setup margin: SS, +1.52 ns.
+Smallest hold margin: FF, +0.11 ns.
+Remaining: verify timing constraints and path coverage; obtain appropriate corner-specific extraction; perform DRC/LVS signoff where supported.

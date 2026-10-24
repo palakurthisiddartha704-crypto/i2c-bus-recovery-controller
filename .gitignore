@@ -1,0 +1,22 @@
+# Simulation executables and waveform output
+*.out
+*.vcd
+
+# Temporary editor and backup files
+*.bak
+*.failed_backup
+*.before_counter_opt
+*~
+
+# Temporary files
+half_count[18]
+
+# Intermediate OpenROAD build results
+base_results_before_rebuild_20261024/
+
+# Keep source, testbenches, reports, and deliverables tracked
+/half_count[[]18]
+/sim_counter_opt
+/base_results_before_rebuild_20261024/
+/rtl/*.before_counter_opt
+/synth/*.failed_backup

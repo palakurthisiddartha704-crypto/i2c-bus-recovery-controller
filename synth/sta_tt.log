@@ -1,0 +1,132 @@
+OpenSTA 3.1.0  Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: rst_n (input port clocked by core_clk)
+Endpoint: scl_release$_DFFE_PN1P_
+          (recovery check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ rst_n (in)
+   0.00    1.00 ^ scl_release$_DFFE_PN1P_/SET_B (sky130_fd_sc_hd__dfstp_2)
+           1.00   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+  -0.20    9.80   clock uncertainty
+   0.00    9.80   clock reconvergence pessimism
+           9.80 ^ scl_release$_DFFE_PN1P_/CLK (sky130_fd_sc_hd__dfstp_2)
+   0.13    9.93   library recovery time
+           9.93   data required time
+---------------------------------------------------------
+           9.93   data required time
+          -1.00   data arrival time
+---------------------------------------------------------
+           8.93   slack (MET)
+
+
+Startpoint: enable (input port clocked by core_clk)
+Endpoint: half_count[25]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ enable (in)
+   0.14    1.14 ^ _353_/X (sky130_fd_sc_hd__clkbuf_2)
+   0.09    1.23 v _354_/Y (sky130_fd_sc_hd__nand2b_1)
+   0.15    1.39 v _357_/Y (sky130_fd_sc_hd__a2bb2oi_1)
+   0.50    1.88 v _397_/X (sky130_fd_sc_hd__or4_1)
+   0.16    2.05 v _398_/X (sky130_fd_sc_hd__buf_2)
+   0.24    2.29 ^ _417_/Y (sky130_fd_sc_hd__nor4_1)
+   0.13    2.42 ^ _418_/X (sky130_fd_sc_hd__o21a_1)
+   0.00    2.42 ^ half_count[25]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+           2.42   data arrival time
+
+  10.00   10.00   clock core_clk (rise edge)
+   0.00   10.00   clock network delay (ideal)
+  -0.20    9.80   clock uncertainty
+   0.00    9.80   clock reconvergence pessimism
+           9.80 ^ half_count[25]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.06    9.74   library setup time
+           9.74   data required time
+---------------------------------------------------------
+           9.74   data required time
+          -2.42   data arrival time
+---------------------------------------------------------
+           7.31   slack (MET)
+
+
+Startpoint: rst_n (input port clocked by core_clk)
+Endpoint: busy$_DFFE_PN0P_ (removal check against rising-edge clock core_clk)
+Path Group: asynchronous
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ rst_n (in)
+   0.00    1.00 ^ busy$_DFFE_PN0P_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+           1.00   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.20    0.20   clock uncertainty
+   0.00    0.20   clock reconvergence pessimism
+           0.20 ^ busy$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.30    0.50   library removal time
+           0.50   data required time
+---------------------------------------------------------
+           0.50   data required time
+          -1.00   data arrival time
+---------------------------------------------------------
+           0.50   slack (MET)
+
+
+Startpoint: fault$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by core_clk)
+Endpoint: fault$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clk)
+Path Group: core_clk
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ fault$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.30    0.30 ^ fault$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.11    0.40 ^ _643_/X (sky130_fd_sc_hd__a22o_1)
+   0.00    0.40 ^ fault$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+           0.40   data arrival time
+
+   0.00    0.00   clock core_clk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.20    0.20   clock uncertainty
+   0.00    0.20   clock reconvergence pessimism
+           0.20 ^ fault$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.04    0.16   library hold time
+           0.16   data required time
+---------------------------------------------------------
+           0.16   data required time
+          -0.40   data arrival time
+---------------------------------------------------------
+           0.24   slack (MET)
+
+
+worst slack max 7.31
+worst slack min 0.24

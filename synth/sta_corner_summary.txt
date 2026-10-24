@@ -1,0 +1,9 @@
+I2C Recovery Controller - Post-Synthesis STA
+Clock period: 10 ns
+
+Corner | Worst Setup Slack (ns) | Worst Minimum Slack (ns)
+TT     | +7.31                  | +0.24
+SS     | +1.31                  | -0.47
+FF     | +7.90                  | +0.07
+
+Conclusion: SS has a negative minimum slack on an asynchronous reset removal check. Timing closure across all corners is not yet established. These are pre-layout STA results, not post-route results.
