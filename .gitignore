@@ -20,3 +20,4 @@ base_results_before_rebuild_20261024/
 /base_results_before_rebuild_20261024/
 /rtl/*.before_counter_opt
 /synth/*.failed_backup
+/synth/sta_route_corner_summary.txt
