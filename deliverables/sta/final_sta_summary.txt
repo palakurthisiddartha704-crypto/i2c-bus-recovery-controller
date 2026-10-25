@@ -1,0 +1,25 @@
+I2C BUS RECOVERY CONTROLLER - EXTRACTED PARASITIC STA SUMMARY
+Date: Sun Oct 25 10:30:56 AM IST 2026
+Clock period: 10 ns; uncertainty: 0.2 ns
+Parasitics: same SPEF generated using available Sky130HD test extraction rules for TT/SS/FF timing-library runs
+
+===== TT =====
+worst slack max 7.30
+worst slack min 0.31
+===== SS =====
+worst slack max 1.52
+worst slack min 0.72
+===== FF =====
+worst slack max 7.86
+worst slack min 0.11
+
+===== SPEF =====
+-rw-rw-r-- 1 vsduser vsduser 137K Oct 25 10:27 deliverables/sta/i2c_recovery_rcx.spef
+160
+
+===== ROUTE DRC EVIDENCE =====
+0 /home/vsduser/OpenROAD-flow-scripts/flow/reports/sky130hd/i2c_recovery/base/5_route_drc.rpt
+0
+
+===== LVS EVIDENCE =====
+/home/vsduser/OpenROAD-flow-scripts/flow/logs/sky130hd/i2c_recovery/base/6_lvs.log
