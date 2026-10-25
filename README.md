@@ -56,3 +56,54 @@ gtkwave sim/i2c_recovery.vcd
 ### Final Layout
 
 ![Final layout](docs/images/final_layout.png)
+
+## All-Corner Static Timing Analysis (STA)
+
+The controller was evaluated at TT, SS, and FF timing-library corners. Two result sets are kept separate: global-route parasitic estimates and experimental extracted-SPEF analysis.
+
+### Global-Route Parasitic Estimates
+
+| Corner | Worst Setup Slack (ns) | Worst Hold Slack (ns) | Setup WNS (ns) | Setup TNS (ns) | Hold WNS (ns) | Hold TNS (ns) |
+|---|---:|---:|---:|---:|---:|---:|
+| TT | +7.23 | +0.35 | 0.00 | 0.00 | 0.00 | 0.00 |
+| SS | +1.24 | +0.76 | 0.00 | 0.00 | 0.00 | 0.00 |
+| FF | +7.82 | +0.14 | 0.00 | 0.00 | 0.00 | 0.00 |
+
+### Experimental Extracted-SPEF Results
+
+| Corner | Worst Setup Slack (ns) | Worst Hold Slack (ns) | Setup WNS (ns) | Setup TNS (ns) | Hold WNS (ns) | Hold TNS (ns) |
+|---|---:|---:|---:|---:|---:|---:|
+| TT | +7.30 | +0.31 | 0.00 | 0.00 | 0.00 | 0.00 |
+| SS | +1.52 | +0.72 | 0.00 | 0.00 | 0.00 | 0.00 |
+| FF | +7.86 | +0.11 | 0.00 | 0.00 | 0.00 | 0.00 |
+
+WNS and TNS are the explicit values reported by OpenSTA for the checked setup and hold path groups. Worst slack gives the smallest reported timing margin; it is not interchangeable with TNS.
+
+### STA Graphs
+
+#### Setup Slack
+
+![Setup slack across corners](docs/images/sta_setup_slack.png)
+
+#### Hold Slack
+
+![Hold slack across corners](docs/images/sta_hold_slack.png)
+
+#### Worst Setup and Hold Slack
+
+![Worst slack across corners](docs/images/sta_worst_slack.png)
+
+#### Worst Negative Slack (WNS)
+
+![WNS across corners](docs/images/sta_wns.png)
+
+#### Total Negative Slack (TNS)
+
+![TNS across corners](docs/images/sta_tns.png)
+
+### STA Methodology and Limitations
+
+- Global-route results use `estimate_parasitics -global_routing`; they are estimates, not extracted-parasitic signoff.
+- Extracted-SPEF results use experimental Sky130HD test extraction rules. The same SPEF was reused across TT, SS, and FF timing-library runs.
+- The results are preliminary. Corner-specific parasitic extraction, constraint/path-coverage review, and independent signoff remain outstanding.
+- See `deliverables/sta/` for the detailed scripts, logs, and summaries.
