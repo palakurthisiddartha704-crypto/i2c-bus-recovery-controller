@@ -27,6 +27,8 @@ Yosys reports 146 mapped standard cells, a synthesis cell area of 1371.3152 um^2
 The project contains floorplanning, placement, clock-tree synthesis, routing, and final-layout artifacts. Recorded routing logs report zero routing violations, and the recorded LVS log reports matching netlists.
 
 **STA limitation:** The documented TT, SS, and FF runs reuse the same extracted SPEF. These are experimental comparisons, not corner-specific parasitic extraction or foundry signoff.
+##VIDEO_Link
+https://drive.google.com/file/d/1IHbdaZ2Vfk7zYoCCV2o21MgKe9dDDZ5U/view?usp=drivesdk
 
 ## Waveform
 ![GTKWave recovery waveform](docs/images/gtkwave_recovery.png)
